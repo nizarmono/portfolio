@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar-fixed{
+    @apply fixed z-[9999] bg-white bg-opacity-70;
+    backdrop-filter : blur(4px);
+    box-shadow : inset 0 -1px 0 0 rgba(0,0,0,0.2);
+}
+.hover-style{
+    @apply hover:opacity-80 hover:shadow-lg hover:shadow-lime-400/40  active:bg-lime-600 active:translate-y-1 active:shadow-none;
+}
+.hamburger-line{
+    @apply w-[24px] h-[2px] my-[6px] md:w-[30px] md:h-[2px] block md:my-2 bg-lime-500 transition duration-500 ease-in-out;
+}
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+    @apply  scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+}
+.media-hover{
+    @apply hover:drop-shadow-[0_5px_5px_rgba(132,204,22,0.5)] hover:opacity-70 active:translate-y-[2px];
+}
+.inner-custom{
+    box-shadow: 
+        inset 0px 11px 8px -10px #CCC,
+        inset 0px -11px 8px -10px #CCC; 
+}
+.scale{
+    @apply hover:scale-110 transition duration-300;
+}
+.green-unline{
+    @apply inline-block border-b-4 border-lime-400 p-2;
+}
+.input{
+    @apply ring-1 ring-lime-400 focus:outline-none focus:ring-1 focus:shadow-sm focus:shadow-lime-500 focus:ring-lime-500;
+}
